@@ -10,32 +10,34 @@
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the Apache License Version 2.0 for the specific language governing permissions and limitations there under.
  */
+
 import sbt._
 
 object Dependencies {
   val resolutionRepos = Seq(
-    ScalaToolsSnapshots,
-    "EclipseLink Repo" at "http://download.eclipse.org/rt/eclipselink/maven.repo" 
+    DefaultMavenRepository,
+    "EclipseLink Repo" at "http://download.eclipse.org/rt/eclipselink/maven.repo"
   )
 
   object V {
-    val http      = "4.1.1"
-    val jackson   = "1.9.1"
-    val moxy      = "2.3.0"
+    val http = "4.4.5"
+    val jackson = "1.9.13"
+    val moxy = "2.7.1"
   }
 
   object Runtime {
 
     // Apache HttpClient is used as the main HttpAdapter
-    val httpCore    = "org.apache.httpcomponents" % "httpcore"            % V.http
-    val httpClient  = "org.apache.httpcomponents" % "httpclient"          % V.http
+    val httpCore = "org.apache.httpcomponents" % "httpcore" % V.http
+    val httpClient = "org.apache.httpcomponents" % "httpclient" % "4.5.4"
 
     // Jackson required to compile the orderly-representations. Note we use the Apache licensed versions
-    val jackCore    = "org.codehaus.jackson"      % "jackson-core-asl"    % V.jackson
-    val jackMapper  = "org.codehaus.jackson"      % "jackson-mapper-asl"  % V.jackson
-    val jackXc      = "org.codehaus.jackson"      % "jackson-xc"          % V.jackson
+    val jackCore = "org.codehaus.jackson" % "jackson-core-asl" % V.jackson
+    val jackMapper = "org.codehaus.jackson" % "jackson-mapper-asl" % V.jackson
+    val jackXc = "org.codehaus.jackson" % "jackson-xc" % V.jackson
 
     // We use Moxy for the naming convention transforms
-    val moxy        = "org.eclipse.persistence"   % "eclipselink"         % V.moxy
+    val moxy = "org.eclipse.persistence" % "eclipselink" % V.moxy
   }
+
 }

@@ -14,10 +14,11 @@ package co.orderly.narcolepsy
 package representations
 
 // Scala
-import scala.reflect.BeanProperty
 
 // JAXB
 import javax.xml.bind.annotation._
+
+import scala.beans.BeanProperty
 
 // Jackson
 import org.codehaus.jackson.annotate._

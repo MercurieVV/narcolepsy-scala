@@ -247,10 +247,7 @@ trait Id {
 
 trait Listable[RW <: RepresentationWrapper[_]] {
 
-  self: {
-    def unmarshal(): UnmarshalledResponse[_ <: ErrorRepresentation, _ <: RepresentationWrapper[_]]
-    val exception: Boolean
-  } =>
+  self: Query[RW] =>
 
   /**
    * toList runs a command and unmarshals it, then either decomposes the unmarshalled
