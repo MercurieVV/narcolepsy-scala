@@ -1,3 +1,8 @@
+Version 0.2.6 (2018-01-16)
+--------------------------
+Migrate to SBT 1.1.0
+Migrate to Scala 2.12.4
+
 Version 0.2.5 (2012-05-10)
 --------------------------
 Added in Java->Scala null conversions
