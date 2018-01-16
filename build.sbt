@@ -5,9 +5,9 @@ import Dependencies.Runtime
 // It should build on both sbt 0.13.15 and sbt 1.0.0
 lazy val root = (project in file("."))
   .settings(
-    organization in ThisBuild := "com.github.mercurievv",
+    organization in ThisBuild := "com.github.MercurieVV",
     scalaVersion in ThisBuild := "2.12.2",
-    version      in ThisBuild := "0.2.6-SNAPSHOT",
+    version      in ThisBuild := "0.2.7",
     name := "narcolepsy_scala",
 
     libraryDependencies ++= Seq(
